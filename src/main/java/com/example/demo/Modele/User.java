@@ -11,10 +11,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true)
+    private String cin;
+
+    @Column(unique = true)
+    private String email;
+
     private String firstName;
     private String lastName;
-    private String cin;
-    private String email;
     private String address;
     private String phone;
 
